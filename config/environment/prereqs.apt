@@ -1,0 +1,4 @@
+ubuntu-gnome-desktop
+# miscellaneous tools
+#ack-grep not supported in 17.10 :(
+tree
