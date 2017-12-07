@@ -1,3 +1,9 @@
 [submodule "config/shell/fonts.symlink"]
 	path = config/shell/fonts.symlink
 	url = https://github.com/powerline/fonts.git
+[submodule "config/vim/vim.symlink/bundle/colors-solarized"]
+	path = config/vim/vim.symlink/bundle/colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "config/vim/vim.symlink/bundle/syntastic"]
+	path = config/vim/vim.symlink/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git

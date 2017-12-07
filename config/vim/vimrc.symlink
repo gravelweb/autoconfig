@@ -1,0 +1,75 @@
+" PLUGINS
+" -------
+execute pathogen#infect()
+Helptags
+
+" FUNCTIONAL SETTINGS
+" -------------------
+" enable filetype detection
+filetype indent plugin on
+
+" highlight lines over 79 chars long
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%80v.\+/
+
+" save tmp files to ~/tmp, avoiding collisions with similarly named files
+set dir=~/tmp//
+
+" quick macro mapping
+nnoremap Q @q
+
+" ctrl+c closes current file, go to next, and keep split
+" http://stackoverflow.com/a/4468491/3213811
+nnoremap <C-c> :bn\|bd #<CR>
+
+" file tab completion tweaks
+set wildmode=list:longest,full wildmenu smartcase
+
+" builtin file fuzzy finder
+set path+=**
+
+" more intuitive backspace
+"  * backspace indentation
+"  * backspace to previous line
+"  * backspace past start of insert mode
+set backspace=indent,eol,start
+
+" more intuitive splits
+set splitbelow
+set splitright
+
+" number lines relative to current line
+set number relativenumber
+
+" LOOK AND FEEL
+" -------------
+" show whitespace as characters
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
+
+" color theme
+colorscheme solarized
+set background=dark
+
+" always show status bar
+set laststatus=2
+
+" highlight search
+set hlsearch
+
+" STASHED CONFIG
+" --------------
+" ultisnips
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsListSnippets="<c-s>"
+
+" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" change autocomplete L&F
+"highlight Pmenu ctermbg=4 ctermfg=7* gui=bold
+"highlight PmenuSel ctermbg=7 ctermfg=4 gui=bold
