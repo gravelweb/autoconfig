@@ -3,6 +3,14 @@
 execute pathogen#infect()
 Helptags
 
+" vim-tmux-navigator
+" when moving beyond the vim splits, move to the next tmux pane
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
+
 " FUNCTIONAL SETTINGS
 " -------------------
 " enable filetype detection

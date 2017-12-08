@@ -4,6 +4,12 @@
 [submodule "config/vim/vim.symlink/bundle/colors-solarized"]
 	path = config/vim/vim.symlink/bundle/colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "config/vim/vim.symlink/bundle/tmux-navigator"]
+	path = config/vim/vim.symlink/bundle/tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "config/vim/vim.symlink/bundle/syntastic"]
 	path = config/vim/vim.symlink/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "config/tmux/tmux.symlink/tmux-resurrect"]
+	path = config/tmux/tmux.symlink/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect.git
