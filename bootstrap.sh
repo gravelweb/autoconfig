@@ -22,7 +22,7 @@ else
         -O "${AUTOCONFIG_ZIP}"
     unzip "${AUTOCONFIG_ZIP}" -d "${AUTOCONFIG_DIR}"
     mv "${AUTOCONFIG_DIR}/${GIT_REPO}-${branch}"/* "${AUTOCONFIG_DIR}/"
-    rmdir "${AUTOCONFIG_DIR}/${GIT_REPO}-${branch}"
+    rm -r "${AUTOCONFIG_DIR}/${GIT_REPO}-${branch}"
 fi
 
 
