@@ -3,6 +3,12 @@ export ZSH=~/.oh-my-zsh
 
 export EDITOR=vim
 
+# Auto generated rc file.
+GENRC=~/.genrc
+if [[ -f $GENRC ]]; then
+    source $GENRC
+fi
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -19,9 +25,6 @@ fi
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-
-# Default user for oh-my-zsh theme 'agnoster'
-DEFAULT_USER="jgravel"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/

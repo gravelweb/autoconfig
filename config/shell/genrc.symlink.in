@@ -1,0 +1,2 @@
+# Default user for oh-my-zsh theme 'agnoster'
+DEFAULT_USER="@INSTALLER@"

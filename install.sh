@@ -37,12 +37,12 @@ echo ".............................done"
 
 echo ""
 
-echo "Installing symlinks.............."
-source ./install-scripts/symlinks.sh
+echo "Running configuration........."
+source ./install-scripts/configs.sh
 echo ".............................done"
 
 echo ""
 
-echo "Installing configuration........."
-source ./install-scripts/configs.sh
+echo "Installing symlinks.............."
+source ./install-scripts/symlinks.sh
 echo ".............................done"
