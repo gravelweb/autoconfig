@@ -1,5 +1,7 @@
 # 256 colours for vim
 set -g default-terminal "xterm-256color"
+# replace italics with reverse (highlight)
+set -g terminal-overrides 'rxvt-unicode*:sitm@,ritm@'
 
 # automatically renumber tmux windows
 set -g renumber-windows on
