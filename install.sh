@@ -4,6 +4,7 @@ sudo apt update
 sudo apt upgrade -V -y
 
 git submodule update --init
+git pull --rebase
 
 SOURCE="$(pwd)/config/"
 
