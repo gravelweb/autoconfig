@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Expand $PATH to include the directory where snappy applications go.
+if [[ "${PATH#*/snap/bin}" = "${PATH}" ]]; then
+    export PATH=$PATH:/snap/bin
+fi
