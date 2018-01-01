@@ -4,3 +4,9 @@
 if [[ "${PATH#*/snap/bin}" = "${PATH}" ]]; then
     export PATH=$PATH:/snap/bin
 fi
+
+# Expand $PATH to include GOPATH/bin
+export GOPATH=$(go env GOPATH)
+if [[ "${PATH#*$GOPATH/bin}" = "${PATH}" ]]; then
+    export PATH=$PATH:$GOPATH/bin
+fi
