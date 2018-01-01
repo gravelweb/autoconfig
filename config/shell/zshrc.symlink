@@ -41,4 +41,4 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 
 source $ZSH/oh-my-zsh.sh
 
-alias reload!='. ~/.zshrc'
+alias reload!='. ~/.zshrc && . ~/.zprofile'
