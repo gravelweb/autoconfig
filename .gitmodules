@@ -13,3 +13,6 @@
 [submodule "config/tmux/tmux.symlink/tmux-resurrect"]
 	path = config/tmux/tmux.symlink/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
+[submodule "config/vim/vim.symlink/bundle/go"]
+	path = config/vim/vim.symlink/bundle/go
+	url = https://github.com/fatih/vim-go.git
