@@ -32,7 +32,10 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 
 # show git status in cmd prompt
-plugins=(git)
+plugins=(
+    git
+    per-directory-history
+)
 
 # shell always runs tmux
 plugins+=(tmux)
