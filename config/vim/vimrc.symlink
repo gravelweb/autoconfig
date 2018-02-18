@@ -49,6 +49,12 @@ set splitright
 " number lines relative to current line
 set number relativenumber
 
+" enable mouse operations
+set mouse=a
+
+" map <leader> to ','
+let mapleader=","
+
 " LOOK AND FEEL
 " -------------
 " show whitespace as characters
