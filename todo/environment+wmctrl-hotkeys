@@ -1,0 +1,3 @@
+Ctrl + Shift + T -> wmctl -a Terminal
+Ctrl + Shift + B -> wmctl -a Firefox
+Ctrl + Shift + M -> wmctl -a Spotify
