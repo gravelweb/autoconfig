@@ -16,9 +16,8 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 " enable filetype detection
 filetype indent plugin on
 
-" highlight lines over 79 chars long
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+" artificial max line length of 79 columns
+set colorcolumn=80
 
 " save tmp files to ~/tmp, avoiding collisions with similarly named files
 set dir=~/tmp//
