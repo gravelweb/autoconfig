@@ -2,4 +2,4 @@
 
 set -e
 
-test -d /sys/module/hid_apple
+uname -a | grep -q Darwin

@@ -1,12 +1,11 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade -V -y
+sudo --validate  # refresh sudo timeout
 
 git submodule update --init
 git pull --rebase
 
-SOURCE="$(pwd)/config/"
+SOURCE="$(pwd)/config"
 
 skiplist=()
 for skiptest in $(find "$SOURCE" -name 'skip-condition.*'); do

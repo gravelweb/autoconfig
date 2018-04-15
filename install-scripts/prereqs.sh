@@ -17,20 +17,30 @@ function install_prereqs {
     fi
 
     echo "Installing ${suffix} prereqs"
-    sudo "${installer[@]}" "${prereqs[@]}"
+    "${installer[@]}" "${prereqs[@]}"
 }
 
 prereqs_installed=
 
-if which apt >/dev/null 2>&1; then
-    if install_prereqs apt "apt install --yes"; then
+if uname -a | grep -q Ubuntu >/dev/null 2>&1; then
+    sudo apt update
+    sudo apt upgrade -V -y
+    if install_prereqs apt "sudo apt install --yes"; then
         prereqs_installed=true
+    fi
+    if which snap >/dev/null 2>&1; then
+        install_prereqs snap.classic "sudo snap install --classic"
     fi
 fi
 
-if which snap >/dev/null 2>&1; then
-    if install_prereqs snap.classic "snap install --classic"; then
-        prereqs_installed=true
+if uname -a | grep -q Darwin; then
+    if which brew >/dev/null 2>&1; then
+        if install_prereqs brew "brew install"; then
+            prereqs_installed=true
+        fi
+    else
+        # TODO automate brew install
+        echo "Error: Couldn't install prereqs: Brew not installed."
     fi
 fi
 
