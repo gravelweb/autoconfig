@@ -2,7 +2,9 @@
 
 set -e
 
-# configure git settings
+# ----------------- #
+# git user settings #
+# ----------------- #
 if ! git config --global --get user.email >/dev/null 2>&1
 then
     echo -n "Please provide Git user.email: "
@@ -16,6 +18,12 @@ then
     read username
     git config --global user.name "${username}"
 fi
+
+# ------------------------ #
+# git miscellaneous config #
+# ------------------------ #
+# don't paginate if output fits screen
+git config --global --replace-all core.pager "less -FX"
 
 # configure ssh keys
 if [[ ! -e ~/.ssh/id_rsa ]]; then
