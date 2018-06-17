@@ -37,6 +37,16 @@ if uname -a | grep -q Darwin; then
     if which brew >/dev/null 2>&1; then
         if install_prereqs brew "brew install"; then
             prereqs_installed=true
+        else
+            # some packages may be out of date
+            if brew outdated > /dev/null; then
+                # run brew again, but do upgrades now
+                brew upgrade
+            fi
+            if install_prereqs brew "brew install"; then
+                # check everything is up to date now
+                prereqs_installed=true
+            fi
         fi
     else
         # TODO automate brew install
