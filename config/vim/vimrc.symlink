@@ -70,6 +70,9 @@ set laststatus=2
 " highlight search
 set hlsearch
 
+" syntax highlighting
+syntax on
+
 " STASHED CONFIG
 " --------------
 " ultisnips
