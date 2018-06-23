@@ -3,7 +3,7 @@
 symlinkfiles=($(find "$SOURCE" "${findargs[@]}" -name '*.symlink' -print))
 for symlink in "${symlinkfiles[@]}"; do
     basename=${symlink##*/}
-    dest=~/.${basename%.*}
+    dest=$(echo ~/.${basename%.*} | tr '^' '/')
     if [[ -e "${dest}" ]]; then
         if [[ "$(readlink -- "${dest}")" == "${symlink}" ]]; then
             echo "Symlink already set: ${dest}"

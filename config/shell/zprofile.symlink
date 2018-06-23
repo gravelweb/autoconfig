@@ -10,3 +10,16 @@ export GOPATH=$(go env GOPATH)
 if [[ "${PATH#*$GOPATH/bin}" = "${PATH}" ]]; then
     export PATH=$PATH:$GOPATH/bin
 fi
+
+# Expand $PATH to include user python library
+PYPATH=$(python3 -c 'import site; print(site.USER_BASE)')
+if [[ "${PATH#*$PYPATH/bin}" = "${PATH}" ]]; then
+    export PATH=$PATH:$PYPATH/bin
+fi
+
+# Expand $PATH to include nvim fuzzyfinder library
+export VIMCONFIG=~/.config/nvim
+if [[ "${PATH#*$VIMCONFIG/pack/bundle/start/fzf/bin}" = "${PATH}" ]]; then
+    export PATH=$PATH:$VIMCONFIG/pack/bundle/start/fzf/bin
+fi
+export FZF_DEFAULT_COMMAND='rg --files'
