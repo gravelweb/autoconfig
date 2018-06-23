@@ -35,18 +35,31 @@ fi
 
 if uname -a | grep -q Darwin; then
     if which brew >/dev/null 2>&1; then
-        if install_prereqs brew "brew install"; then
-            prereqs_installed=true
-        else
+        brew_try_upgrade=
+        if ! install_prereqs brew "brew install"; then
+            brew_try_upgrade=1
+        fi
+        if ! install_prereqs brew.cask "brew cask install"; then
+            brew_try_upgrade=1
+        fi
+
+        if [[ $brew_try_upgrade ]]; then
             # some packages may be out of date
             if brew outdated > /dev/null; then
                 # run brew again, but do upgrades now
                 brew upgrade
             fi
-            if install_prereqs brew "brew install"; then
-                # check everything is up to date now
-                prereqs_installed=true
+
+            # check everything is up to date now
+            brew_success=1
+            if ! install_prereqs brew "brew install"; then
+                brew_success=
+            elif ! install_prereqs brew.cask "brew cask install"; then
+                brew_success=
             fi
+            [[ success ]] && prereqs_installed=true
+        else
+            prereqs_installed=true
         fi
     else
         # TODO automate brew install
