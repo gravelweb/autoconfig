@@ -2,6 +2,13 @@
 
 sudo --validate  # refresh sudo timeout
 
+# Ensure the script is always ran from the same location
+ABS_PATH=~/.autoconfig
+if ! cd "$ABS_PATH"; then
+    echo "Expected installation location: $ABS_PATH"
+    exit 1
+fi
+
 git submodule update --init
 git pull --rebase
 

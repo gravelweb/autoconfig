@@ -15,11 +15,11 @@ for symlink in "${symlinkfiles[@]}"; do
         echo "  * [b]ackup and override"
         echo "  * [s]kip"
         echo -n "Choose an option: "
-        done="false"
+        fini="false"
         skip="false"
-        while [[ "${done}" == "false" ]]; do
+        while [[ "${fini}" == "false" ]]; do
             read symlink__option
-            done="true"
+            fini="true"
             case "${symlink__option}" in
                 o|override)
                     rm -rf "${dest}"
@@ -32,7 +32,7 @@ for symlink in "${symlinkfiles[@]}"; do
                     ;;
                 *)
                     echo "Unknown option: ${symlink__option}"
-                    done="false"
+                    fini="false"
                     ;;
             esac
         done
