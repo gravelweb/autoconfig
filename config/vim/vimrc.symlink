@@ -73,6 +73,9 @@ set hlsearch
 " syntax highlighting
 syntax on
 
+" gutentag settings
+let g:gutentags_cache_dir="~/tmp"
+
 " STASHED CONFIG
 " --------------
 " ultisnips
