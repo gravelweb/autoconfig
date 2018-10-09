@@ -11,8 +11,19 @@ fatal() {
     exit 1
 }
 
-user=${1:-gravelweb}
-branch=${2:-master}
+user=gravelweb
+branch=master
+extras=()
+for opt in "$@"; do
+    case "${opt}" in
+        user=*)     user=("${opt##user=}") ;;
+        branch=*)   branch=("${opt##branch=}") ;;
+        extra=*)    extras+=("${opt##extra=}") ;;
+        *)
+            fatal "Unrecognized argument ${opt}."
+            ;;
+    esac
+done
 
 if [[ -d "${AUTOCONFIG_DIR}" ]]; then
     echo "Info: ${AUTOCONFIG_DIR} directory already exists. Trying to update..."
@@ -29,7 +40,7 @@ if [[ -d "${AUTOCONFIG_DIR}" ]]; then
     #git reset --hard origin/master  # Dangerous
     git pull --rebase
     git submodule update --init
-    for extra in ${#extras[@]} != 0 ]]; do
+    for extra in "${extras[@]}"; do
         echo "Info: Cloning config for extra="${extra}"..."
         if [[ "${extra}" == corsa ]]; then
             # TODO parameterize
