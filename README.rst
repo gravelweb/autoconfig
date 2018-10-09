@@ -3,13 +3,9 @@ Overview
 
 First run
 ---------
-```
-wget https://raw.githubusercontent.com/gravelweb/autoconfig/master/bootstrap.sh
-bash bootstrap.sh
-```
+.. code::
+   wget https://raw.githubusercontent.com/gravelweb/autoconfig/master/bootstrap.sh
+   bash bootstrap.sh  # Run once to perform initial software configuration.
+   bash bootstrap.sh  # Run again to complete configuration.
 
-Missing this config:
-```
-git remote add origin git@github.com:gravelweb/autoconfig.git
-chsh
-```
+Some configuration requires that the system be rebooted.
