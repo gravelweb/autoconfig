@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Query the spotify client for currently playing
@@ -112,8 +112,8 @@ def display():
     metadata = player_properties['Metadata']
     playback_status = player_properties['PlaybackStatus']
 
-    title = metadata['xesam:title'].encode('utf-8')
-    artists = ', '.join(metadata['xesam:artist']).encode('utf-8')
+    title = metadata['xesam:title']#.encode('utf-8')
+    artists = ', '.join(metadata['xesam:artist'])#.encode('utf-8')
     status = '♪' if playback_status == 'Playing' else ' '
     print("{status} {title} - {artists}".format(**locals()))
 
