@@ -53,3 +53,7 @@ echo ""
 echo "Installing symlinks.............."
 source ./install-scripts/symlinks.sh
 echo ".............................done"
+
+echo ""
+
+echo "All done! You should probably reboot now."
