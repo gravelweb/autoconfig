@@ -4,8 +4,8 @@ scriptdir=$(dirname "${BASH_SOURCE[0]}")
 
 # install oh-my-zsh if missing
 if [[ -d ~/.oh-my-zsh ]]; then
-    echo "Info: oh my zsh already installed."
-    # TODO: Update oh-my-zsh
+    echo "Info: oh my zsh already installed. Upgrading..."
+    zsh -ic upgrade_oh_my_zsh
 else
     wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | zsh
     chsh -s $(which zsh)

@@ -20,6 +20,9 @@ fi
 # ---------------- #
 # oh-my-zsh config #
 # ---------------- #
+# Disable auto updates. Running install.sh in .autoconfig directory will
+# perform this upgrade.
+DISABLE_AUTO_UPDATE=true
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
