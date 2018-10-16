@@ -25,3 +25,6 @@
 [submodule "config/vim/vim.symlink/bundle/gutentags"]
 	path = config/vim/vim.symlink/bundle/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "config/vim/vim.symlink/bundle/fzf"]
+	path = config/vim/vim.symlink/bundle/fzf
+	url = https://github.com/junegunn/fzf.git
