@@ -44,7 +44,7 @@ echo ".............................done"
 
 echo ""
 
-echo "Running configuration........."
+echo "Running configuration............"
 source ./install-scripts/configs.sh
 echo ".............................done"
 
@@ -52,6 +52,12 @@ echo ""
 
 echo "Installing symlinks.............."
 source ./install-scripts/symlinks.sh
+echo ".............................done"
+
+echo ""
+
+echo "Installing bins.................."
+source ./install-scripts/bins.sh
 echo ".............................done"
 
 echo ""

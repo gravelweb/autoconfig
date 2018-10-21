@@ -10,3 +10,8 @@ export GOPATH=$(go env GOPATH)
 if [[ "${PATH#*$GOPATH/bin}" = "${PATH}" ]]; then
     export PATH=$PATH:$GOPATH/bin
 fi
+
+# Expand $PATH to include ~/bin
+if [[ "${PATH#*$HOME/bin}" = "${PATH}" ]]; then
+    export PATH=$PATH:$HOME/bin
+fi
