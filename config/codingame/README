@@ -1,0 +1,6 @@
+The condigame script launches the codingame local app
+(https://github.com/jmerle/cg-local-app) which synchronizes a local
+file with the codingame web IDE.
+
+Requires https://addons.mozilla.org/en-US/firefox/addon/cg-local/
+firefox add-on.
