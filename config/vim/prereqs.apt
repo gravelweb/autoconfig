@@ -1,2 +1,3 @@
-vim-nox
 ctags
+vim-nox
+virtualenv
