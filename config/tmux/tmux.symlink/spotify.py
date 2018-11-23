@@ -112,8 +112,8 @@ def display():
     metadata = player_properties['Metadata']
     playback_status = player_properties['PlaybackStatus']
 
-    title = metadata['xesam:title']#.encode('utf-8')
-    artists = ', '.join(metadata['xesam:artist'])#.encode('utf-8')
+    title = metadata['xesam:title'].replace('#', r'##')
+    artists = ', '.join(metadata['xesam:artist'])
     status = '♪' if playback_status == 'Playing' else ' '
     print("{status} {title} - {artists}".format(**locals()))
 
