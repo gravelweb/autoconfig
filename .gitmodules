@@ -37,3 +37,6 @@
 [submodule "config/vim/vim.symlink/bundle/ale"]
 	path = config/vim/vim.symlink/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "config/vim/vim.symlink/bundle/mediawiki"]
+	path = config/vim/vim.symlink/bundle/mediawiki
+	url = https://github.com/chikamichi/mediawiki.vim.git
