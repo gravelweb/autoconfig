@@ -9,6 +9,7 @@ rustup update
 rustup toolchain add nightly
 rustup component add rust-src
 rustup component add rustfmt-preview
+rustup component add rls-preview
 
 if [[ -z "$(which racer)" ]]; then
     cargo +nightly install racer
