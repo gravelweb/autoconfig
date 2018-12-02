@@ -3,7 +3,7 @@
 bindir=$HOME/bin
 mkdir -p "${bindir}"
 
-binfiles=($(find "$SOURCE" "${findargs[@]}" -name '*.bin' -print))
+binfiles=($(find "$SOURCE" "${findargs[@]}" -print | egrep '[^/]\.bin$'))
 for bin in "${binfiles[@]}"; do
     basename=${bin##*/}
     dest=${bindir}/${basename%.*}
