@@ -76,6 +76,10 @@ syntax on
 " gutentag settings
 let g:gutentags_cache_dir="~/tmp"
 
+" ALE hotkeys
+nmap <silent> <leader>aj :ALENext<cr>
+nmap <silent> <leader>ak :ALEPrevious<cr>
+
 " STASHED CONFIG
 " --------------
 " ultisnips
