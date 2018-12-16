@@ -44,8 +44,17 @@ if [[ -d "${AUTOCONFIG_DIR}" ]]; then
         echo "Info: Cloning config for extra="${extra}"..."
         if [[ "${extra}" == corsa ]]; then
             # TODO parameterize
-            (cd config && \
-                git clone git@git.corp:jgravel/autoconfig-corsa.git corsa)
+            CORSA_CONFIG_DIR=config/corsa
+            if [[ ! -d $CORSA_CONFIG_DIR ]]; then
+                (git clone git@git.corp:jgravel/autoconfig-corsa.git \
+                    $CORSA_CONFIG_DIR)
+            fi
+            CORSA_VIM_PLUGIN_DIR=config/vim/vim.symlink/plugin/corsa
+            if [[ ! -d $CORSA_VIM_PLUGIN_DIR ]]; then
+                (git clone git@git.corp:jgravel/autoconfig-corsa-vim.git \
+                    $CORSA_VIM_PLUGIN_DIR)
+            fi
+
         else
             fatal "Unknown extra."
         fi
