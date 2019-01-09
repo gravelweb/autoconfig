@@ -17,10 +17,8 @@ set-option -g history-limit 9999
 # Key bindings
 ####
 
-# vimify prefix
-unbind C-b
-set -g prefix C-w
-bind C-w send-prefix
+set -g prefix C-space
+bind C-space send-prefix
 
 # vimify copy
 bind P paste-buffer
@@ -33,11 +31,14 @@ bind r source-file ~/.tmux.conf \; display ".tmux.conf reloaded"
 # pane movement
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
-bind-key h if-shell "$is_vim" "send-keys C-w h"  "select-pane -L"
-bind-key j if-shell "$is_vim" "send-keys C-w j"  "select-pane -D"
-bind-key k if-shell "$is_vim" "send-keys C-w k"  "select-pane -U"
-bind-key l if-shell "$is_vim" "send-keys C-w l"  "select-pane -R"
-bind-key = if-shell "$is_vim" "send-keys C-w ="  "choose-buffer"
+bind-key -n C-h if-shell "$is_vim" "send-keys C-w h" "select-pane -L"
+bind-key -n C-j if-shell "$is_vim" "send-keys C-w j" "select-pane -D"
+bind-key -n C-k if-shell "$is_vim" "send-keys C-w k" "select-pane -U"
+bind-key -n C-l if-shell "$is_vim" "send-keys C-w l" "select-pane -R"
+bind-key -T copy-mode-vi C-h select-pane -L
+bind-key -T copy-mode-vi C-j select-pane -D
+bind-key -T copy-mode-vi C-k select-pane -U
+bind-key -T copy-mode-vi C-l select-pane -R
 
 # use current working directory for new window/pane
 bind '"' split-window -c "#{pane_current_path}"
@@ -73,7 +74,7 @@ bind-key -n M-0 select-window -t :10
 # spotify
 bind -n C-S-Right run "~/.tmux/spotify.py Next; sleep 0.1" \; refresh-client -S
 bind -n C-S-Left  run "~/.tmux/spotify.py Previous; sleep 0.1" \; refresh-client -S
-bind -n C-Space run "~/.tmux/spotify.py ToggleStatus; sleep 0.1" \; refresh-client -S
+bind C-p run "~/.tmux/spotify.py ToggleStatus; sleep 0.1" \; refresh-client -S
 
 # don't allow programs to change window names
 set-option -g allow-rename off
