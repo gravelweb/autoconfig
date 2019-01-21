@@ -54,10 +54,11 @@ set incsearch                      " search as characters are entered
 " }}}
 " Leader Shortcuts {{{
 let mapleader=","
-" }}}
-" ALE {{{
+" ALE config
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
+" Undotree
+nmap <leader>u :UndotreeToggle<cr>
 " }}}
 " Gutentag {{{
 let g:gutentags_cache_dir="~/tmp"  " change tag dir

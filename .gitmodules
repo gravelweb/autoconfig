@@ -25,3 +25,6 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/ultisnips"]
 	path = config/vim/vim.symlink/pack/bundle/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/undotree"]
+	path = config/vim/vim.symlink/pack/bundle/start/undotree
+	url = https://github.com/mbbill/undotree.git
