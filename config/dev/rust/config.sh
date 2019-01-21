@@ -6,11 +6,12 @@ fi
 
 rustup update
 
-rustup toolchain add nightly
 rustup component add rust-src
-rustup component add rustfmt-preview
-rustup component add rls-preview
+rustup component add rustfmt
+rustup component add rls
 
 if [[ -z "$(which racer)" ]]; then
+    # racer not yet available on stable
+    rustup install nightly
     cargo +nightly install racer
 fi
