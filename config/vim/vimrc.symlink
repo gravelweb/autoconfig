@@ -46,7 +46,11 @@ set wildmode=list:longest,full     " don't autofill file completion
 set wildmenu                       " show completion options above cmdline
 set path+=**                       " use builtin file fuzzy finder
 " }}}
-" Searching {{{
+" File/Code Searching {{{
+" file search
+nnoremap <C-p> :Files<cr>          " use fzf fuzzyfinder (via fzf.vim)
+nnoremap <C-g> :Rg<cr>             " use ripgrep search (via fzf.vim)
+" code search
 set hlsearch                       " highlight matches
 set ignorecase                     " ignore case while searching ...
 set smartcase                      " ... unless upper case letter is used

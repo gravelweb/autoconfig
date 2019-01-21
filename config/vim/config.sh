@@ -2,6 +2,8 @@
 
 set -e
 
+SCRIPT_DIR=$(dirname $(readlink -f $0))
+
 # directory for vim swap files
 mkdir -p ~/tmp
 
@@ -15,4 +17,9 @@ pushd "${venvdir}"
 source bin/activate
 pip install pylint pytest
 deactivate
+popd
+
+# Install fzf binary
+pushd "${SCRIPT_DIR}/vim.symlink/pack/bundle/start"
+./fzf/install --key-bindings --completion --update-rc
 popd

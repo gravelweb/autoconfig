@@ -15,3 +15,6 @@ if [[ -z "$(which racer)" ]]; then
     rustup install nightly
     cargo +nightly install racer
 fi
+if [[ -z "$(which rg)" ]]; then
+    cargo install ripgrep
+fi

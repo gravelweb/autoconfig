@@ -28,3 +28,9 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/undotree"]
 	path = config/vim/vim.symlink/pack/bundle/start/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/fzf.vim"]
+	path = config/vim/vim.symlink/pack/bundle/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/fzf"]
+	path = config/vim/vim.symlink/pack/bundle/start/fzf
+	url = https://github.com/junegunn/fzf.git

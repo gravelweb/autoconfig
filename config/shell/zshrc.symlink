@@ -48,3 +48,5 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 source $ZSH/oh-my-zsh.sh
 
 alias reload!='. ~/.zshrc && . ~/.zprofile'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
