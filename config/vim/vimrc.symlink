@@ -1,85 +1,68 @@
-" PLUGINS
-" -------
-execute pathogen#infect()
-Helptags
-
-" vim-tmux-navigator
+" gravelweb vim config
+" Look & Feel {{{
+colorscheme solarized
+set background=dark
+" artificial max line length of 79 columns
+set colorcolumn=80
+" show whitespace as characters
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
+" always show status bar
+set laststatus=2
+" syntax highlighting
+syntax on
+" more intuitive splits
+set splitbelow
+set splitright
+" number lines relative to current line
+set number relativenumber
+" }}}
+" Misc {{{
+" save tmp files to ~/tmp, avoiding collisions with similarly named files
+set dir=~/tmp//
+" quick macro mapping
+nnoremap Q @q
+" ctrl+c closes current file, go to next, and keep split
+" http://stackoverflow.com/a/4468491/3213811
+nnoremap <C-c> :bn\|bd #<CR>
+" }}}
+" Tmux {{{
 " when moving beyond the vim splits, move to the next tmux pane
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
 nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
 nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
-
-" FUNCTIONAL SETTINGS
-" -------------------
-" enable filetype detection
-filetype indent plugin on
-
-" artificial max line length of 79 columns
-set colorcolumn=80
-
-" save tmp files to ~/tmp, avoiding collisions with similarly named files
-set dir=~/tmp//
-
-" quick macro mapping
-nnoremap Q @q
-
-" ctrl+c closes current file, go to next, and keep split
-" http://stackoverflow.com/a/4468491/3213811
-nnoremap <C-c> :bn\|bd #<CR>
-
-" file tab completion tweaks
-set wildmode=list:longest,full wildmenu smartcase
-
-" builtin file fuzzy finder
-set path+=**
-
-" more intuitive backspace
-"  * backspace indentation
-"  * backspace to previous line
-"  * backspace past start of insert mode
-set backspace=indent,eol,start
-
-" more intuitive splits
-set splitbelow
-set splitright
-
-" number lines relative to current line
-set number relativenumber
-
-" enable mouse operations
-set mouse=a
-
-" map <leader> to ','
+" }}}
+" Per-File/Filetype Options {{{
+" each file may specify vim config via modeline
+set modeline                       " undo debian system-wide disable
+set modelines=1
+filetype indent on                 " enable filetype indentation
+filetype plugin on                 " enable filetype plugin
+" }}}
+" File/Code Completion {{{
+set wildmode=list:longest,full     " don't autofill file completion
+set wildmenu                       " show completion options above cmdline
+set path+=**                       " use builtin file fuzzy finder
+" }}}
+" Searching {{{
+set hlsearch                       " highlight matches
+set ignorecase                     " ignore case while searching ...
+set smartcase                      " ... unless upper case letter is used
+set incsearch                      " search as characters are entered
+" }}}
+" Leader Shortcuts {{{
 let mapleader=","
-
-" LOOK AND FEEL
-" -------------
-" show whitespace as characters
-set listchars=tab:>-,trail:~,extends:>,precedes:<
-set list
-
-" color theme
-colorscheme solarized
-set background=dark
-
-" always show status bar
-set laststatus=2
-
-" highlight search
-set hlsearch
-
-" syntax highlighting
-syntax on
-
-" gutentag settings
-let g:gutentags_cache_dir="~/tmp"
-
-" ALE hotkeys
+" }}}
+" ALE {{{
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
-
+" }}}
+" Gutentag {{{
+let g:gutentags_cache_dir="~/tmp"  " change tag dir
+" }}}
+" Stashed Config {{{
 " STASHED CONFIG
 " --------------
 " ultisnips
@@ -96,3 +79,5 @@ nmap <silent> <leader>ak :ALEPrevious<cr>
 " change autocomplete L&F
 "highlight Pmenu ctermbg=4 ctermfg=7* gui=bold
 "highlight PmenuSel ctermbg=7 ctermfg=4 gui=bold
+" }}}
+" vim: foldmethod=marker foldlevel=0
