@@ -1,42 +1,27 @@
 [submodule "config/shell/fonts.symlink"]
 	path = config/shell/fonts.symlink
 	url = https://github.com/powerline/fonts.git
-[submodule "config/vim/vim.symlink/bundle/colors-solarized"]
-	path = config/vim/vim.symlink/bundle/colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "config/vim/vim.symlink/bundle/tmux-navigator"]
-	path = config/vim/vim.symlink/bundle/tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "config/tmux/tmux.symlink/tmux-resurrect"]
 	path = config/tmux/tmux.symlink/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
-[submodule "config/vim/vim.symlink/bundle/go"]
-	path = config/vim/vim.symlink/bundle/go
-	url = https://github.com/fatih/vim-go.git
-[submodule "config/vim/vim.symlink/bundle/splitjoin"]
-	path = config/vim/vim.symlink/bundle/splitjoin
-	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule "config/vim/vim.symlink/bundle/ultisnips"]
-	path = config/vim/vim.symlink/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "config/vim/vim.symlink/bundle/gutentags"]
-	path = config/vim/vim.symlink/bundle/gutentags
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-colors-solarized"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-tmux-navigator"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-gutentags"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "config/vim/vim.symlink/bundle/fzf"]
-	path = config/vim/vim.symlink/bundle/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "config/vim/vim.symlink/bundle/plantuml-syntax"]
-	path = config/vim/vim.symlink/bundle/plantuml-syntax
-	url = https://github.com/aklt/plantuml-syntax.git
-[submodule "config/vim/vim.symlink/bundle/rust"]
-	path = config/vim/vim.symlink/bundle/rust
-	url = https://github.com/rust-lang/rust.vim.git
-[submodule "config/vim/vim.symlink/bundle/racer"]
-	path = config/vim/vim.symlink/bundle/racer
-	url = https://github.com/racer-rust/vim-racer.git
-[submodule "config/vim/vim.symlink/bundle/ale"]
-	path = config/vim/vim.symlink/bundle/ale
+[submodule "config/vim/vim.symlink/pack/bundle/start/ale"]
+	path = config/vim/vim.symlink/pack/bundle/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "config/vim/vim.symlink/bundle/mediawiki"]
-	path = config/vim/vim.symlink/bundle/mediawiki
+[submodule "config/vim/vim.symlink/pack/bundle/start/splitjoin.vim"]
+	path = config/vim/vim.symlink/pack/bundle/start/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/mediawiki.vim"]
+	path = config/vim/vim.symlink/pack/bundle/start/mediawiki.vim
 	url = https://github.com/chikamichi/mediawiki.vim.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/ultisnips"]
+	path = config/vim/vim.symlink/pack/bundle/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
