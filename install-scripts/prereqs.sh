@@ -31,6 +31,7 @@ if uname -a | grep -q Ubuntu >/dev/null 2>&1; then
     if which snap >/dev/null 2>&1; then
         install_prereqs snap.classic "sudo snap install --classic"
     fi
+    sudo apt autoremove -V -y
 fi
 
 if uname -a | grep -q Darwin; then
