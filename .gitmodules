@@ -49,3 +49,6 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/ncm2"]
 	path = config/vim/vim.symlink/pack/bundle/start/ncm2
 	url = https://github.com/ncm2/ncm2.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/ncm2-racer"]
+	path = config/vim/vim.symlink/pack/bundle/start/ncm2-racer
+	url = https://github.com/ncm2/ncm2-racer.git
