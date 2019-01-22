@@ -42,9 +42,13 @@ filetype indent on                 " enable filetype indentation
 filetype plugin on                 " enable filetype plugin
 " }}}
 " File/Code Completion {{{
+" file completion
 set wildmode=list:longest,full     " don't autofill file completion
 set wildmenu                       " show completion options above cmdline
 set path+=**                       " use builtin file fuzzy finder
+" code completion
+autocmd BufEnter * call ncm2#enable_for_buffer()  " enable ncm2 for all buffers
+set completeopt=noinsert,menuone,noselect         " required by ncm2
 " }}}
 " File/Code Searching {{{
 " file search

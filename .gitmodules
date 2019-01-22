@@ -40,3 +40,12 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/vim-racer"]
 	path = config/vim/vim.symlink/pack/bundle/start/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-hug-neovim-rpc"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/nvim-yarp"]
+	path = config/vim/vim.symlink/pack/bundle/start/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/ncm2"]
+	path = config/vim/vim.symlink/pack/bundle/start/ncm2
+	url = https://github.com/ncm2/ncm2.git

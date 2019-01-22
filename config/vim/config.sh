@@ -23,3 +23,6 @@ popd
 pushd "${SCRIPT_DIR}/vim.symlink/pack/bundle/start"
 ./fzf/install --key-bindings --completion --update-rc
 popd
+
+# Install neovim python client
+pip3 install neovim
