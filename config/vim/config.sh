@@ -24,6 +24,10 @@ pushd "${SCRIPT_DIR}/vim.symlink/pack/bundle/start"
 ./fzf/install --key-bindings --completion --update-rc
 popd
 
+# Install linters and fixers
+pip3 install pylint
+pip3 install black
+
 # Install ncm2 dependencies
 pip3 install neovim
 pip3 install jedi        # ncm2-jedi dependency
