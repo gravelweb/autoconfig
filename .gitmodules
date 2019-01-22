@@ -34,3 +34,9 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/fzf"]
 	path = config/vim/vim.symlink/pack/bundle/start/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/rust.vim"]
+	path = config/vim/vim.symlink/pack/bundle/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-racer"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git
