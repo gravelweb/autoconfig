@@ -25,6 +25,8 @@ nnoremap Q @q
 " ctrl+c closes current file, go to next, and keep split
 " http://stackoverflow.com/a/4468491/3213811
 nnoremap <C-c> :bn\|bd #<CR>
+" prevent : from indenting code in Python
+autocmd FileType python setlocal indentkeys-=<:>
 " }}}
 " Tmux {{{
 " when moving beyond the vim splits, move to the next tmux pane
