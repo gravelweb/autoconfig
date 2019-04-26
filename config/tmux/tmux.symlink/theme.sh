@@ -1,9 +1,9 @@
 # colours
-tm_colour_active=colour120
+tm_colour_active=colour181
 tm_colour_inactive=colour241
 tm_colour_feature=colour13
 tm_colour_music=colour147
-tm_colour_active_border=colour198
+tm_colour_active_border=colour247
 
 # window title colours
 set-window-option -g window-status-current-fg $tm_colour_active
