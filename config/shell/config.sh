@@ -24,3 +24,5 @@ sed -e 's/@INSTALLER@/'${USER}'/g' "${genrcin}" >> "${genrcout}"
 
 # install powerline fonts
 (cd ~/.fonts && ./install.sh)
+# install more fonts
+cp ${scriptdir}/fonts/* ~/.fonts/
