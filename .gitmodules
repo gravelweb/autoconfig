@@ -55,3 +55,9 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/ncm2-jedi"]
 	path = config/vim/vim.symlink/pack/bundle/start/ncm2-jedi
 	url = https://github.com/ncm2/ncm2-jedi.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-toml"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-toml
+	url = https://github.com/cespare/vim-toml.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-commentary"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
