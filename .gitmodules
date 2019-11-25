@@ -61,3 +61,9 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/vim-commentary"]
 	path = config/vim/vim.symlink/pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/python-syntax"]
+	path = config/vim/vim.symlink/pack/bundle/start/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/asyncrun.vim"]
+	path = config/vim/vim.symlink/pack/bundle/start/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim.git
