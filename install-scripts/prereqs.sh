@@ -22,7 +22,7 @@ function install_prereqs {
 
 prereqs_installed=
 
-if uname -a | grep -q Ubuntu >/dev/null 2>&1; then
+if lsb_release -a | grep -q Ubuntu >/dev/null 2>&1; then
     sudo apt update
     sudo apt upgrade -V -y
     if install_prereqs apt "sudo apt install --yes"; then

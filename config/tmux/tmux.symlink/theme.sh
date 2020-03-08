@@ -6,17 +6,15 @@ tm_colour_music=colour147
 tm_colour_active_border=colour247
 
 # window title colours
-set-window-option -g window-status-current-fg $tm_colour_active
-set-window-option -g window-status-current-bg default
+set-window-option -g window-status-current-style fg=$tm_colour_active,bg=default
 set-window-option -g window-status-current-format "#[bold]#I #W"
 
 # pane border
-set-option -g pane-border-fg $tm_colour_inactive
-set-option -g pane-active-border-fg $tm_colour_active_border
+set-option -g pane-border-style fg=$tm_colour_inactive
+set-option -g pane-active-border-style fg=$tm_colour_active_border
 
 # message text
-set-option -g message-bg default
-set-option -g message-fg $tm_colour_active
+set-option -g message-style bg=default,fg=$tm_colour_active
 
 # pane number display
 set-option -g display-panes-active-colour $tm_colour_active
@@ -30,9 +28,7 @@ set -g status-left-length 32
 set -g status-right-length 150
 set -g status-interval 5
 
-set-option -g status-fg $tm_colour_active
-set-option -g status-bg default
-set-option -g status-attr default
+set-option -g status-style fg=$tm_colour_active,bg=default,default
 
 tm_spotify="#[fg=$tm_colour_music]#(~/.tmux/spotify.py)"
 
