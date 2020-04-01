@@ -67,3 +67,6 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/asyncrun.vim"]
 	path = config/vim/vim.symlink/pack/bundle/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vim-mustache-handlebars"]
+	path = config/vim/vim.symlink/pack/bundle/start/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
