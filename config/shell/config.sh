@@ -26,3 +26,7 @@ sed -e 's/@INSTALLER@/'${USER}'/g' "${genrcin}" >> "${genrcout}"
 (cd ~/.fonts && ./install.sh)
 # install more fonts
 cp ${scriptdir}/fonts/* ~/.fonts/
+
+
+# fish config
+fish -c "set fish_key_bindings fish_vi_key_bindings"

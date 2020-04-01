@@ -16,6 +16,11 @@ if [[ "${PATH#*$HOME/bin}" = "${PATH}" ]]; then
     export PATH=$PATH:$HOME/bin
 fi
 
+# Expand $PATH to include ~/.local/bin
+if [[ "${PATH#*$HOME/.local/bin}" = "${PATH}" ]]; then
+   export PATH=$PATH:$HOME/.local/bin
+fi
+
 # Expand $PATH to include cargo (rust) binaries
 if [[ "${PATH#*$HOME/.cargo/bin}" = "${PATH}" ]]; then
     export PATH=$PATH:$HOME/.cargo/bin
