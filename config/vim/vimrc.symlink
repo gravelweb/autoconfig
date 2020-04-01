@@ -2,8 +2,8 @@
 " Look & Feel {{{
 colorscheme solarized
 set background=dark
-" artificial max line length of 79 columns
-set colorcolumn=80
+" artificial max line length of 88 columns
+set colorcolumn=89
 " show whitespace as characters
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
@@ -74,6 +74,16 @@ nmap <silent> <leader>af <Plug>(ale_fix)
 " }}}
 " Gutentag {{{
 let g:gutentags_cache_dir="~/tmp"  " change tag dir
+" }}}
+" Commands {{{
+" automatically open quickfix window when AsyncRun command is executed
+" set the quickfix window 6 lines height.
+let g:asyncrun_open = 6
+" ring the bell to notify you job finished
+let g:asyncrun_bell = 1
+" F10 to toggle quickfix window
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+nnoremap <F9> :call asyncrun#quickfix_toggle(1000)<cr>
 " }}}
 " Stashed Config {{{
 " STASHED CONFIG
