@@ -1,7 +1,5 @@
 " gravelweb vim config
 " Look & Feel {{{
-colorscheme solarized
-set background=dark
 " artificial max line length of 88 columns
 set colorcolumn=89
 " show whitespace as characters
@@ -16,6 +14,45 @@ set splitbelow
 set splitright
 " number lines relative to current line
 set number relativenumber
+" spellcheck highlight
+augroup SpellUnderline
+  autocmd!
+  autocmd ColorScheme *
+    \ highlight SpellBad
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellCap
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellLocal
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  autocmd ColorScheme *
+    \ highlight SpellRare
+    \   cterm=Underline
+    \   ctermfg=NONE
+    \   ctermbg=NONE
+    \   term=Reverse
+    \   gui=Undercurl
+    \   guisp=Red
+  augroup END
+" colorscheme (must be after spellcheck highlight)
+colorscheme solarized
+set background=dark
 " }}}
 " Misc {{{
 " save tmp files to ~/tmp, avoiding collisions with similarly named files
