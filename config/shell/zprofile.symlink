@@ -27,3 +27,5 @@ fi
 if [[ "${PATH#*$HOME/.cargo/bin}" = "${PATH}" ]]; then
     export PATH=$PATH:$HOME/.cargo/bin
 fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
