@@ -27,6 +27,8 @@ sed -e 's/@INSTALLER@/'${USER}'/g' "${genrcin}" >> "${genrcout}"
 # install more fonts
 cp ${scriptdir}/fonts/* ~/.fonts/
 
+# install p10k
+(cd $HOME/.oh-my-zsh/themes && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git)
 
 # fish config
 fish -c "set fish_key_bindings fish_vi_key_bindings"

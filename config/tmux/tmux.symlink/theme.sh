@@ -38,3 +38,5 @@ tm_session_name="#[fg=$tm_colour_feature,bold]$tm_icon #S"
 
 set -g status-left $tm_session_name' '
 set -g status-right $tm_spotify' '$tm_date' '$tm_host
+
+source ~/.tmux/tmux-gruvbox-dark.conf

@@ -73,3 +73,9 @@
 [submodule "config/vim/vim.symlink/pack/bundle/start/goyo.vim"]
 	path = config/vim/vim.symlink/pack/bundle/start/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/gruvbox"]
+	path = config/vim/vim.symlink/pack/bundle/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "config/vim/vim.symlink/pack/bundle/start/vimwiki"]
+	path = config/vim/vim.symlink/pack/bundle/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

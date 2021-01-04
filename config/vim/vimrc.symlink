@@ -51,7 +51,7 @@ augroup SpellUnderline
     \   guisp=Red
   augroup END
 " colorscheme (must be after spellcheck highlight)
-colorscheme solarized
+colorscheme gruvbox
 set background=dark
 " }}}
 " Misc {{{
