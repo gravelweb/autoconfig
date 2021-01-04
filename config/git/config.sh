@@ -26,10 +26,10 @@ fi
 git config --global --replace-all core.pager "less -FX"
 
 # configure ssh keys
-if [[ ! -e ~/.ssh/id_rsa ]]; then
+if [[ ! -e ~/.ssh/id_ed25519 ]]; then
     if [[ -z "${useremail}" ]]; then
         echo -n "Please provide Git user.email: "
         read useremail
     fi
-    ssh-keygen -t rsa -b 4096 -C "${useremail}"
+    ssh-keygen -t ed25519 -C "${useremail}"
 fi

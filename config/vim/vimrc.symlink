@@ -100,7 +100,6 @@ set smartcase                      " ... unless upper case letter is used
 set incsearch                      " search as characters are entered
 " }}}
 " Leader Shortcuts {{{
-let mapleader=","
 " Undotree
 nmap <leader>u :UndotreeToggle<cr>
 " }}}
